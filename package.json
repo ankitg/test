@@ -1,14 +1,14 @@
 {
   "name": "test",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm version patch --no-git-tag-version && git add package.json"
+      "pre-commit": "npm version patch --no-git-tag-version && git add package.json package-lock.json"
     }
   },
   "repository": {
