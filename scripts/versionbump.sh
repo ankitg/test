@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "Welcome to Version BUMP";
 currentbranch=$(git rev-parse --abbrev-ref HEAD);
 if [ "$currentbranch" = "master" ]; then
   lastcommitmsg=$(git log -1 --pretty=%B);
