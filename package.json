@@ -8,7 +8,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "sh ./scripts/versionbump.sh"
+      "post-merge": "sh ./scripts/versionbump.sh"
     }
   },
   "repository": {
