@@ -5,11 +5,11 @@ if [ "$currentbranch" = "master" ]; then
   echo "Last commit was: $lastcommitmsg";
   if [[ ! "$lastcommitmsg" == "[bump]"* ]]; then
     echo "Commiting to Master branch, patching version number";
-    npm version --no-commit-hooks  --no-git-tag-version patch -m "[bump] Version bumped to %s";
+    npm version --no-commit-hooks -m "[bump] Version bumped to %s";
   else
     echo "Not bumping version on master. Last commit was $lastcommitmsg";
   fi
-else 
+else
   echo "Commiting to $currentbranch branch. Not master, version number unchanged";
   currentversion=$(cat package.json | grep '"version":');
   echo "$currentversion";
