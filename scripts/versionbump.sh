@@ -5,7 +5,8 @@ if [ "$currentbranch" = "master" ]; then
   echo "Last commit was: $lastcommitmsg";
   if [[ ! "$lastcommitmsg" == "[bump]"* ]]; then
     echo "Commiting to Master branch, patching version number";
-    npm version --no-commit-hooks -m "[bump] Version bumped to %s";
+    npm version -m "[bump] Version bumped to %s";
+    ## git add package.json package-lock.json;
   else
     echo "Not bumping version on master. Last commit was $lastcommitmsg";
   fi
