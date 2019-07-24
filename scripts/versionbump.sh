@@ -7,6 +7,7 @@ if [ "$currentbranch" = "master" ]; then
   if [[ ! "$lastcommitmsg" == "[bump]"* ]]; then
     echo "Commiting to Master branch, patching version number";
     npm version patch -m "[bump] Version bumped to %s";
+    git push —-tags origin master
   else
     echo "Not bumping version on master. Last commit was $lastcommitmsg";
   fi
