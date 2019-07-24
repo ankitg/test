@@ -7,5 +7,6 @@ node version bump on git push to master branch
 • Using husky to employ a post-commit hook  
 • The post-commit hook calls a script that compares current branch to 'master' and uses `npm version` to bump the version.  
 • The script then pushes the tags so the new version is tagged on the master branch.  
+• The version number is exposed in the app via `process.env.npm_package_version`  
   
 ---
