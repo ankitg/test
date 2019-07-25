@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "postversion": "sh ./scripts/versionbump.sh BUMP-PUSH-TAGS"
   },
   "husky": {
     "hooks": {
-      "post-commit": "sh ./scripts/versionbump.sh"
+      "pre-push": "sh ./scripts/versionbump.sh"
     }
   },
   "repository": {
